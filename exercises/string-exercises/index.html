@@ -18,5 +18,49 @@
     </div>
     <script src="js/strings.js"></script>
     <script src="js/app.js"></script>
+
+
+    function function1(){
+      var str1 = document.getElementById('problem1').value;
+      var indexOfIs = str1.indexOf("is"); // index of "is"
+      var arr1 = str1.split(','); // string is converted to array by splitting at ,
+      var thirdElement = arr1[2]; // start index = 0 So, 3rd element =element at index 2
+      document.getElementById('indexOfResult').innerHTML = thirdElement;//an
+      }
+      
+      function function2(){
+      var str2 = document.getElementById('problem2').value;
+      var arr2 = str2.split(',');
+      
+      //sum of the elements of the array
+      
+      var sum2 = 0;
+      var l2 = arr2.length; // number of elements in array 
+      
+      for(var i=0; i<l2; i++){
+      sum2 = sum2 + parseInt(arr2[i]);
+      }
+      document.getElementById('sumResult').innerHTML = sum2;//17
+      }
+      
+      function function3(){
+      var str3 = document.getElementById('problem3').value;
+      var arr3 = str3.split(',');
+      
+      //sum of squares of the elements of the array
+      
+      var squareSum3 = 0;
+      var l3 = arr3.length;
+      
+      for(var i=0; i<l3; i++){
+      var squareElement = parseInt(arr3[i]) * parseInt(arr3[i]);
+      squareSum3 = squareSum3 + squareElement;
+      }
+      document.getElementById('squareResult').innerHTML = squareSum3;//87
+      }
+      function1();
+      function2();
+      function3(); 
+    </script>
   </body>
 </html>

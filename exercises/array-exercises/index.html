@@ -7,37 +7,79 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Array Functions</h1>
-    <div class="section">
-      <h2>Index Of</h2>
-      <label for="problem1">enter array elements separated by a comma:</label>
-      <input id="problem1" value="This,is,an,array" />
+    <h1>Array Functions</h1> <div class="section">
+      <h2>Index Of</h2> 
+      <label for="probleml">enter array elements separated by a comma:</label> 
+      <input id="problem1" value="This,is,an,array" /> 
       <label for="problem1-2">enter element you want to get the index of:</label>
-      <input id="problem1-2" value="is" />
+       <input id="problem1-2" value="is" /> 
       <span id="">
-        The third element is:
-        <p id="indexOfResult"></p>
-      </span>
-    </div>
-    <div class="section">
-      <h2>Sum of an Array of Numbers</h2>
-      <label for="problem2">enter array elements separated by a comma:</label>
-      <input id="problem2" value="2,3,5,7" />
+      The third element is:
+      <p id="indexOfResult"></p> 
+      </span> 
+      </div> 
+      <div class="section">
+      <h2>Sum of an Array of Numbers</h2> 
+      <label for"problem2">enter array elements separated by a comma:</label> 
+      <input id="problem2" value="2,3,5,7" > 
       <span id="">
-        The summation of this array is:
-        <p id="sumResult"></p>
+      The summation of this array is:
+      <p id="sumResult"></p> 
       </span>
-    </div>
-    <div class="section">
+       </div>
+       <div class="section">
       <h2>Squaring Individual Array Elements</h2>
-      <label for="problem3">enter array elements separated by a comma:</label>
-      <input id="problem3" value="2,3,5,7" />
-      <span id="">
-        The result is:
-        <p id="squareResult"></p>
-      </span>
-    </div>
+       <label for"problem3">enter array elements separated by a comma:</label> 
+       <input id="problem3" value="2,3,5,7" />
+       <span id""> The result is:
+      <p id="squareResult"></p>
+       </span>
+       </div>
+       
+       <script>
+      function function1(){
+      var str1 = document.getElementById('problem1').value;
+      var indexOfIs = str1.indexOf("is"); // index of "is"
+      var arr1 = str1.split(','); // string is converted to array by splitting at ,
+      var thirdElement = arr1[2]; // start index = 0 So, 3rd element =element at index 2
+      document.getElementById('indexOfResult').innerHTML = thirdElement;//an
+      }
+      
+      function function2(){
+      var str2 = document.getElementById('problem2').value;
+      var arr2 = str2.split(',');
+      
+  
+      
+      var sum2 = 0;
+      var l2 = arr2.length;
+      
+      for(var i=0; i<l2; i++){
+      sum2 = sum2 + parseInt(arr2[i]);
+      }
+      document.getElementById('sumResult').innerHTML = sum2;
+      }
+      
+      function function3(){
+      var str3 = document.getElementById('problem3').value;
+      var arr3 = str3.split(',');
+      
+      var squareSum3 = 0;
+      var l3 = arr3.length;
+      
+      for(var i=0; i<l3; i++){
+      var squareElement = parseInt(arr3[i]) * parseInt(arr3[i]);
+      squareSum3 = squareSum3 + squareElement;
+      }
+      document.getElementById('squareResult').innerHTML = squareSum3;
+      }
+      function1();
+      function2();
+      function3();
+      </script>
+       
     <script src="js/array.js"></script>
     <script src="js/app.js"></script>
+  </script>
   </body>
 </html>
